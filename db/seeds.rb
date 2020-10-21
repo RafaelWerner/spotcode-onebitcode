@@ -4,7 +4,6 @@
 
 tmp_dir = Rails.root.join("tmp")
 
-
 rock = Category.create(name: "Rock")
 rock.image.attach(io: File.open("#{tmp_dir}/seed_files/rock.png"), filename: "rock.png")
 
@@ -16,7 +15,6 @@ country.image.attach(io: File.open("#{tmp_dir}/seed_files/country.png"), filenam
 
 jazz = Category.create(name: "Jazz")
 jazz.image.attach(io: File.open("#{tmp_dir}/seed_files/jazz.png"), filename: "jazz.png")
-
 
 # ANDREW HOWS
 
@@ -35,7 +33,6 @@ crimea.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/crimea.mp3"), fil
 traitors_gate = gubernator.songs.create(title: "Traitors Gate", played_count: Random.rand(1000))
 traitors_gate.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/traitors_gate.mp3"), filename: "traitors_gate.mp3")
 
-
 the_great_bear = andrew_howes.albums.create(title: "The Great Bear", date: Time.strptime("19/05/2015", "%d/%m/%Y"), category: rock)
 the_great_bear.cover.attach(io: File.open("#{tmp_dir}/seed_files/the_great_bear.jpg"), filename: "the_great_bear.jpg")
 
@@ -45,8 +42,6 @@ four_am = the_great_bear.songs.create(title: "4am", played_count: Random.rand(10
 four_am.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/4_am.mp3"), filename: "4_am.mp3")
 waiting = the_great_bear.songs.create(title: "Waiting", played_count: Random.rand(1000))
 waiting.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/waiting.mp3"), filename: "waiting.mp3")
-
-
 
 # YELLOW CHAIR
 
@@ -63,13 +58,11 @@ passeig_de_gracia.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/passei
 itaca = barcelona.songs.create(title: "Itaca", played_count: Random.rand(1000))
 itaca.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/itaca.mp3"), filename: "itaca.mp3")
 
-
 everything_zen = yellow_chair.albums.create(title: "Everything Zen", date: Time.strptime("01/07/2013", "%d/%m/%Y"), category: rock)
 everything_zen.cover.attach(io: File.open("#{tmp_dir}/seed_files/everything_zen.jpg"), filename: "everything_zen.jpg")
 
 everything_zen_music = everything_zen.songs.create(title: "Everything Zen", played_count: Random.rand(1000))
 everything_zen_music.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/everything_zen.mp3"), filename: "everything_zen.mp3")
-
 
 meng_jia = yellow_chair.albums.create(title: "Meng Jia", date: Time.strptime("07/03/2014", "%d/%m/%Y"), category: rock)
 meng_jia.cover.attach(io: File.open("#{tmp_dir}/seed_files/meng_jia.jpg"), filename: "meng_jia.jpg")
@@ -78,7 +71,6 @@ malvinas_go_go = meng_jia.songs.create(title: "Malvinas Go-Go", played_count: Ra
 malvinas_go_go.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/malvinas_go_go.mp3"), filename: "malvinas_go_go.mp3")
 coronation_pope_francis = meng_jia.songs.create(title: "Coronation of Pope Francis", played_count: Random.rand(1000))
 coronation_pope_francis.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/coronation_pope_francis.mp3"), filename: "coronation_pope_francis.mp3")
-
 
 # WAYLON THORNTON
 
@@ -95,9 +87,6 @@ very_hazel.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/very_hazel.mp
 favorite_secrets = mystery_club.songs.create(title: "Favorite Secrets", played_count: Random.rand(1000))
 favorite_secrets.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/favorite_secrets.mp3"), filename: "favorite_secrets.mp3")
 
-
-
-
 # BREAK THE BANS
 
 break_the_bans = Artist.create(name: "Break the Bans")
@@ -108,7 +97,6 @@ covers_besides.cover.attach(io: File.open("#{tmp_dir}/seed_files/covers_besides.
 
 how_can_i_love_her = covers_besides.songs.create(title: "How can I love her", played_count: Random.rand(1000))
 how_can_i_love_her.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/how_can_i_love_her.mp3"), filename: "how_can_i_love_her.mp3")
-
 
 # CULLAH
 
@@ -125,7 +113,6 @@ who_am_i.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/who_am_i.mp3"),
 jane_the_ripper = be_love_not_fear.songs.create(title: "Jane the Ripper", played_count: Random.rand(1000))
 jane_the_ripper.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/jane_the_ripper.mp3"), filename: "jane_the_ripper.mp3")
 
-
 trinity = cullah.albums.create(title: "Trinity", date: Time.strptime("27/04/2016", "%d/%m/%Y"), category: blues)
 trinity.cover.attach(io: File.open("#{tmp_dir}/seed_files/trinity.jpg"), filename: "trinity.jpg")
 
@@ -133,9 +120,6 @@ freed_from_greed = trinity.songs.create(title: "Freed from Greed", played_count:
 freed_from_greed.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/freed_from_greed.mp3"), filename: "freed_from_greed.mp3")
 aisling = trinity.songs.create(title: "Aisling", played_count: Random.rand(1000))
 aisling.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/aisling.mp3"), filename: "aisling.mp3")
-
-
-
 
 # HANDMADE MOMENTS
 
@@ -156,8 +140,6 @@ human_hands.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/human_hands.
 coffee_chocolate_earth = paw_paw_tree.songs.create(title: "Coffee, Chocolate, Earth", played_count: Random.rand(1000))
 coffee_chocolate_earth.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/coffee_chocolate_earth.mp3"), filename: "coffee_chocolate_earth.mp3")
 
-
-
 # DEE YAN-KEY
 
 dee_yan_key = Artist.create(name: "Dee Yan-Key")
@@ -175,7 +157,6 @@ grief.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/grief.mp3"), filen
 clowns = years_and_years_ago.songs.create(title: "Clowns", played_count: Random.rand(1000))
 clowns.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/clowns.mp3"), filename: "clowns.mp3")
 
-
 mans_life = dee_yan_key.albums.create(title: "A Man's Life",  date: Time.strptime("17/09/2012", "%d/%m/%Y"), category: jazz)
 mans_life.cover.attach(io: File.open("#{tmp_dir}/seed_files/mans_life.jpg"), filename: "mans_life.jpg")
 
@@ -184,13 +165,11 @@ life.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/life.mp3"), filenam
 death_redemption = mans_life.songs.create(title: "Death & Redemption", played_count: Random.rand(1000))
 death_redemption.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/death_redemption.mp3"), filename: "death_redemption.mp3")
 
-
 aldebaran = dee_yan_key.albums.create(title: "Aldebaran",  date: Time.strptime("30/01/2012", "%d/%m/%Y"), category: jazz)
 aldebaran.cover.attach(io: File.open("#{tmp_dir}/seed_files/aldebaran.jpg"), filename: "aldebaran.jpg")
 
 antares, = aldebaran.songs.create(title: "Antares", played_count: Random.rand(1000))
 antares.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/antares.mp3"), filename: "antares.mp3")
-
 
 # KING IMAGINE
 
@@ -204,8 +183,6 @@ ivy = inside.songs.create(title: "Ivy", played_count: Random.rand(1000))
 ivy.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/ivy.mp3"), filename: "ivy.mp3")
 escape = inside.songs.create(title: "Escape", played_count: Random.rand(1000))
 escape.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/escape.mp3"), filename: "escape.mp3")
-
-
 
 #========================
 # USERS
