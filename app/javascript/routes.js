@@ -8,7 +8,7 @@ import FavoritesScreen from './screens/favorites';
 
 import { Switch, Route } from 'react-router-dom';
 
-const Routes = (props) => {
+const Routes = (props) => (
   <Switch>
     <Route exact path='/' component={HomeScreen} />
     <Route exact path='/discovery' component={DiscoveryScreen} />
@@ -16,6 +16,6 @@ const Routes = (props) => {
     <Route exact path='/album/:id' component={AlbumScreen} />
     <Route exact path='/favorites' component={FavoritesScreen} />
   </Switch>
-}
+);
 
 export default Routes;
