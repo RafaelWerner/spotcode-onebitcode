@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import Album from '../album';
+import Album from '../common/album';
 import styled from 'styled-components';
 import { Columns, Heading } from 'react-bulma-components';
 import AlbumsService from '../../services/albums';
@@ -10,12 +10,12 @@ const DivVSpaced = styled.div`
 
 const Discovery = () => {
   const [recent_albums, setRecentAlbums] = useState([]);
-  const [recommended_albums, setRecomendedAlbums] = useState([]);
+  const [recommended_albums, setRecommendedAlbums] = useState([]);
 
   async function fetchAlbums() {
     const response = await AlbumsService.index();
     setRecentAlbums(response.data['recent_albums']);
-    setRecomendedAlbums(response.data['recommended_albums']);
+    setRecommendedAlbums(response.data['recommended_albums']);
   }
 
   useEffect(() => {
@@ -23,18 +23,18 @@ const Discovery = () => {
   }, [])
 
   const recent_albums_components = recent_albums.map((album, key) =>
-  <Columns.Column desktop={{ size: 3 }} mobile={{ size: 6 }} key={album}>
-    <Album artits_name={album.artits_name} title={album.title} cover_url={album.cover_url} key={key} id={album.id}/>
-  </Columns.Column>
+    <Columns.Column desktop={{ size: 3 }} mobile={{ size: 6 }} key={key}>
+      <Album artist_name={album.artist_name} title={album.title} cover_url={album.cover_url} id={album.id}/>
+    </Columns.Column>
   );
 
   const recommended_albums_components = recommended_albums.map((album, key) =>
     <Columns.Column desktop={{ size: 3 }} mobile={{ size: 6 }} key={key}>
-      <Album artits_name={album.artits_name} title={album.title} cover_url={album.cover_url} key={key} id={album.id}/>
+      <Album artist_name={album.artist_name} title={album.title} cover_url={album.cover_url} key={key} id={album.id}/>
     </Columns.Column>
   );
 
-  return(
+  return (
     <Fragment>
       {recent_albums_components.length > 0 &&
         <div>
@@ -46,6 +46,7 @@ const Discovery = () => {
           </Columns>
         </div>
       }
+
       {recommended_albums_components.length > 0 &&
         <DivVSpaced>
           <Heading className='has-text-white' size={4}>
@@ -59,5 +60,4 @@ const Discovery = () => {
     </Fragment>
   );
 }
-
 export default Discovery;
